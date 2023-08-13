@@ -1,6 +1,8 @@
-package ru.netology.authservice;
+package ru.netology.authservice.repository;
 
 import org.springframework.stereotype.Repository;
+import ru.netology.authservice.models.Authorities;
+import ru.netology.authservice.models.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +12,7 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
-    HashMap<User, List<Authorities>> userAuthoritiesMap;
+    private final HashMap<User, List<Authorities>> userAuthoritiesMap;
 
     public UserRepository() {
         userAuthoritiesMap = new HashMap<>();
