@@ -18,6 +18,7 @@ public class UserRepository {
         userAuthoritiesMap.put(new User("Василий", "etwyed"), Arrays.asList(Authorities.READ, Authorities.DELETE));
         userAuthoritiesMap.put(new User("Админ", "admin"), Arrays.asList(Authorities.READ, Authorities.WRITE, Authorities.DELETE));
     }
+
     public List<Authorities> getUserAuthorities(String user, String password) {
         return userAuthoritiesMap.get(new User(user, password));
     }
